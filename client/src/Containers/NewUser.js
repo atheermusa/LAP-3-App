@@ -26,8 +26,7 @@ export default class NewUser extends Component {
 
       fetch("http://localhost:3000/users/register", options)
         .then(r=>r.json())
-        .then(results=>alert(results))
-        // .then(addUser)
+        .then(results=>alert(results)) //Let's user know the outcome of their registration
         .catch(console.warn);
 
       //   console.log(options);

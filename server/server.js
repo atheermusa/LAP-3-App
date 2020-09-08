@@ -94,7 +94,10 @@ app.post("/users/register", async (req, res) => {
       if (err) {
         console.log(err);
       }
-
+      
+      //Code below checks if  the username or email is already used
+      //by querying the db and seeing if anything is returned on those values
+      //if so, user isn't addded, otherwise they are
       if (results.rows.length > 0) {
         res.json("Email or Name already used");
       } else {
