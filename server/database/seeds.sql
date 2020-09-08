@@ -12,10 +12,10 @@ CREATE TABLE users(
 );
 
 INSERT INTO users (name, email, password) VALUES
-    ('Simon', 'gfgd@gfdg.com', 'enneneneenene'),
-    ('Atheer','gd@gfdg.com', 'hello'),
-    ('Mugisha', 'fgd@gfdg.com', 'good'),
-    ('Jamie','d@gfdg.com', 'morning')
+    ('Simon', 'simon@gmail.com', '123456'),
+    ('Atheer','atheer@gmail.com', '123456'),
+    ('Mugisha', 'Mugisha@gmail.com', '123456'),
+    ('Jamie','Jamie@gmail.com', '123456')
 ;
 
 
