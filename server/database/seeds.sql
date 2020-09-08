@@ -18,9 +18,6 @@ INSERT INTO users (name, email, password) VALUES
     ('Jamie','Jamie@gmail.com', '123456')
 ;
 
-
-
-
 CREATE TABLE activities(
     id serial PRIMARY KEY,
     name VARCHAR(20) NOT NULL,
