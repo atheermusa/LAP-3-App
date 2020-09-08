@@ -71,7 +71,7 @@ app.get("/users/dashboard", checkNotAuthenticated, (req, res) => {
 // // });
 
 app.post("/users/register", async (req, res) => {
-  let { name, email, password, password2 } = req.body;
+  let { name, email, password } = req.body;
 
   let errors = [];
 
@@ -79,7 +79,6 @@ app.post("/users/register", async (req, res) => {
     name,
     email,
     password,
-    password2,
   });
 
   hashedPassword = await bcrypt.hash(password, 10);

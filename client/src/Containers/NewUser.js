@@ -15,8 +15,7 @@ export default class NewUser extends Component {
       const userData = {
         email: this.state.email,
         name: this.state.username,
-        password: this.state.password,
-        password2: this.state.passwordTwo,
+        password: this.state.password, 
       };
       const options = {
         method: "POST",
