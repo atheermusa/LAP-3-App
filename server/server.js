@@ -88,15 +88,15 @@ app.post("/users/register", async (req, res) => {
   // Validation passed
   pool.query(
     `SELECT * FROM users
-        WHERE email = $1`,
-    [email],
+        WHERE (email = $1) OR (name = $2)`,
+    [email, name],
     (err, results) => {
       if (err) {
         console.log(err);
       }
 
       if (results.rows.length > 0) {
-        return res.send(console.log("Email already used"));
+        res.json("Email or Name already used");
       } else {
         pool.query(
           `INSERT INTO users (name, email, password)
@@ -108,7 +108,7 @@ app.post("/users/register", async (req, res) => {
               throw err;
             }
             console.log(results.rows);
-            console.log("You are now registered. Please log in");
+            res.json(`Welcome to TrackerApp ${name}! Please log in`);
             // res.redirect("/users/login");
           }
         );

@@ -25,11 +25,11 @@ export default class NewUser extends Component {
       };
 
       fetch("http://localhost:3000/users/register", options)
-        // .then((r) => r.json());
-      // .then(addUser)
-      // .catch(console.warn);
+        .then(r=>r.json())
+        .then(results=>alert(results))
+        // .then(addUser)
+        .catch(console.warn);
 
-      console.log("CONNECT TO DB");
       //   console.log(options);
     } else {
       alert("The passwords do not match, please try again");
