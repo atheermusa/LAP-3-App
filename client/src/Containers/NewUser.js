@@ -21,10 +21,11 @@ export default class NewUser extends Component {
       const options = {
         method: "POST",
         body: JSON.stringify(userData),
+        headers: { "Content-Type": "application/json" },
       };
 
-      fetch("http://localhost:3000/users/register", options);
-      // .then((r) => r.json())
+      fetch("http://localhost:3000/users/register", options)
+        // .then((r) => r.json());
       // .then(addUser)
       // .catch(console.warn);
 
